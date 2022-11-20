@@ -75,7 +75,41 @@ function _StringMethodes(){
     //Split
     const SplitedWords =[];
     SplitedWords = Text.split(" "); 
+}
+function _StringSearches(){
+    //index of
+    let source = "My Name Is Amir And I'm Fine";
+    let indexOf = source.indexOf("Amir"); //return 7 and return -1 if text not exist
+    let indexOf2 = source.lastIndexOf("Amir"); // return 7 from end and return -1 if text not exist
+    let index3 = source.matchAll(/m/ig); //return array [M,m,m,m]
 
+    //includes
+    let index4 = source.includes("Amir"); //return true
+    let index5 = source.includes("Amir",3); //return false: if Amir is exists on 3 return true
 
+    //startwith
+    let index6 = source.startsWith("My"); //return true
+    let index7 = source.startsWith("Amir"); //return False
+    let index8 = source.startsWith("Name",3) //return true
 
+    //EndWith
+    let index9 = source.endsWith("Fine"); //return true
+    let index10 = source.endsWith("And"); //return false
+    let index11 = source.endsWith("Name",7)//return true
+}
+
+function _Interpolation(){
+    let FirstName = "Amir";
+    let Lastname = "Ekramian";
+    let Age = 23;
+
+    let text = 'welcome ${Amir} ${LastName}';
+    let hisAge = '${FirstName}: ${hisAge+1}';
+}
+
+function _IsNan(){
+    let number =100;
+    let String = "Apple";
+
+    isNaN(number/String);
 }
