@@ -113,3 +113,95 @@ function _IsNan(){
 
     isNaN(number/String);
 }
+
+function _Numbers(){
+    let x = 123e5; //12300000
+    let y = 123e-5 //0.00123
+
+//Integers (numbers without a period or exponent notation) are accurate up to 15 digits.
+    let a = 9999999999999999; //will be 10000000000000000
+
+let A = "10";
+let B = "100";
+let result1 = A*B; //1000
+let result2 = B/A; //10
+let result3 = B-A; //90
+let result4 = A+B; //10100
+
+let hex = 0xFF; //255
+
+//bigger than 15 digits
+let bigint = 99999999999999999999999n;
+//or 
+let bigint2 = bigint(84563215385465432514);
+}
+function _Array(){
+
+    const Cars=["pride","405","206"];
+
+    const Cars2 = [];
+    Cars2[0] = "Pride";
+    Cars2[1] = "Volvo";
+    Cars2[2] = "BMW";
+
+    const Cars3 = new Array("pride","405","206");
+
+    let Pride = Cars[0];
+
+    //Multitype Array
+    const ComplexArray = ["Amir","Saeed",45];
+
+    //Indexes can be Diffrent object
+    const MyArray = [];
+    const PersonEx = {firstName:"Amir",LastName:"Ekramian"}
+    MyArray[0] = Date.now; //datetime
+    MyArray[1] = _Interpolation; //Method
+    MyArray[2] = Cars3; //another array 
+    MyArray[3] = PersonEx; //an object
+
+    //Arrays Property and Methodes
+    const GlobalArray = ["Amir","Saeed","gholam"];
+    let L = GlobalArray.length; //3
+
+    GlobalArray.push("Mina"); //Add a new element to array
+
+    //Very Import ****
+    const A1 = new Array(40); // create an array with 40 undifined index
+    const A2 = [40]; //create an array with one index with "40" value
+
+    //array recognizer
+    Array.isArray(GlobalArray); //true
+    let type = typeof GlobalArray; //array
+    GlobalArray instanceof Array; //true
+
+    //convert to array
+    let sGlobal = GlobalArray.toString(); //Amir,Saeed,gholam
+    let Joined = GlobalArray.join(" # "); //Amir # Saeed # gholam
+
+    //delete Last Index
+    GlobalArray.pop(); //return gholam
+
+    //Delete First Element
+    GlobalArray.shift(); //firs index deleted return Amir
+    
+    //Add New Elemwet to Begining
+    GlobalArray.unshift("Sepehr"); //return Sepehr
+
+    //Delete an element and no change for indexes(Create a Hole in Array)
+    delete GlobalArray[0];
+
+    //Concat two array and assign it to new array
+    const DArray = GlobalArray.concat(Cars,Cars2,Cars3);
+
+    //add some values to array
+    GlobalArray.splice(2,0,"ali");
+
+    //slice array
+    const SlicedArray = GlobalArray.slice(1); //slice array=saeed,gholam
+
+    //reverse array
+    GlobalArray.reverse();
+
+    
+
+}
